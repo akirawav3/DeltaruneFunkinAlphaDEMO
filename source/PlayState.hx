@@ -2745,6 +2745,7 @@ class PlayState extends MusicBeatState
 				#end
 			}
 
+			CustomFadeTransition.nextCamera = camOther;
 			if (isStoryMode)
 			{
 				campaignScore += songScore;
@@ -2759,7 +2760,6 @@ class PlayState extends MusicBeatState
 			{
 				trace('WENT BACK TO FREEPLAY??');
 				cancelFadeTween();
-				CustomFadeTransition.nextCamera = camOther;
 				if(FlxTransitionableState.skipNextTransIn) {
 					CustomFadeTransition.nextCamera = null;
 				}

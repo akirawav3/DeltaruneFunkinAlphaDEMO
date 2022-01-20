@@ -1,5 +1,6 @@
 package;
 
+import delta.DeltaFreePlay;
 import Controls.Control;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -178,11 +179,7 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
 					CustomFadeTransition.nextCamera = transCamera;
-					if(PlayState.isStoryMode) {
-						MusicBeatState.switchState(new MainMenuState());
-					} else {
-						MusicBeatState.switchState(new FreeplayState());
-					}
+					MusicBeatState.switchState(new DeltaFreePlay('hall'));
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					PlayState.usedPractice = false;
 					PlayState.changedDifficulty = false;

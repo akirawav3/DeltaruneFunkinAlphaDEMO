@@ -60,8 +60,6 @@ class DeltaFreePlay extends MusicBeatState
 
 	override public function create()
 	{
-        super.create();
-
         trace('lastroom: $lastRoom');
 
         //DELTARUNE SAVE COUNT TIMER
@@ -78,6 +76,10 @@ class DeltaFreePlay extends MusicBeatState
         dialogueCam = new FlxCamera();
         dialogueCam.bgColor.alpha = 0;
         FlxG.cameras.add(dialogueCam);
+
+        CustomFadeTransition.nextCamera = dialogueCam;
+
+        super.create();
 
         camGame.fade(FlxColor.BLACK, .25, true);
 
@@ -96,7 +98,7 @@ class DeltaFreePlay extends MusicBeatState
         add(walls);
 
         for(i in 0...songs.length){
-            var song = new FlxSprite(755 + (95*i), 432).loadGraphic(Paths.image('note', 'preload'));
+            var song = new FlxSprite(600 + (95*i), 432).loadGraphic(Paths.image('note', 'preload'));
             song.immovable = true;
             songGroup.add(song);
             var int = new FlxObject(song.x - 2, song.y - 2, song.width + 4, song.height + 4);
@@ -194,16 +196,9 @@ class DeltaFreePlay extends MusicBeatState
             if (!leaving){
                 leaving = true;
                 lastRoom = room;
+                CustomFadeTransition.nextCamera = dialogueCam;
                 MusicBeatState.switchState(new MainMenuState());
             }
-        }
-
-    function playerInteract(player:DeltaPlayer, obj:FlxObject)
-        {
-            paused = true;
-            var dialogue = new DeltaBox(CoolUtil.coolTextFile(Paths.txt('delta/$room/' + interactMap[obj])));
-            dialogue.cameras = [dialogueCam];
-            add(dialogue);
         }
 
     function playerTouchSong(player:DeltaPlayer, obj:FlxObject)
