@@ -133,12 +133,12 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		versionShit.antialiasing = ClientPrefs.globalAntialiasing;
-		add(versionShit);
+		//add(versionShit);
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		versionShit.antialiasing = ClientPrefs.globalAntialiasing;
-		add(versionShit);
+		//add(versionShit);
 
 		chPreview = new FlxSprite(-600);
 		chPreview.frames = Paths.getSparrowAtlas('delta/ch1_preview');
@@ -227,7 +227,7 @@ class MainMenuState extends MusicBeatState
 					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
 				}
  				else if(curSelected == 1){
-					FlxG.sound.play(Paths.sound('boom', 'shared'));
+					FlxG.sound.play(Paths.sound('boom'));
 					ch2.alpha = 1;
 					if(pissTwn != null) pissTwn.cancel();
 					pissTwn = FlxTween.tween(ch2, {alpha: 0}, 1);
@@ -262,7 +262,7 @@ class MainMenuState extends MusicBeatState
 								{
 									case 'ch1':
 										DeltaSaveControl.curSave = FlxG.save.data.save1;
-										MusicBeatState.switchState(new DeltaFreePlay('hall'));
+										LoadingState.loadAndSwitchState(new DeltaFreePlay('hall'));
 									case 'ch2':
 										//MusicBeatState.switchState(new FreeplayState());
 									case 'awards':

@@ -1,141 +1,141 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				-20,
-				-130
+				-128
 			],
-			"anim": "idle-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad idle dance",
+			"anim": "idle-loop",
 			"indices": [
 				10,
 				11,
 				12,
 				12
-			]
+			],
+			"name": "Dad idle dance"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-9,
 				10
 			],
-			"anim": "singLEFT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note LEFT",
+			"anim": "singLEFT-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Dad Sing Note LEFT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				27
 			],
-			"anim": "singRIGHT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note RIGHT",
+			"anim": "singRIGHT-loop",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			]
+			],
+			"name": "Dad Sing Note RIGHT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-6,
 				50
 			],
-			"anim": "singUP-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Dad Sing Note UP",
+			"anim": "singUP-loop",
 			"indices": [
 				56,
 				57,
 				58,
 				59
-			]
+			],
+			"name": "Dad Sing Note UP"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				140,
 				-100
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "hey",
-			"indices": [],
-			"name": "WhatYouKnowAboutRollingDownInTheDeep"
+			"fps": 24,
+			"name": "WhatYouKnowAboutRollingDownInTheDeep",
+			"indices": []
 		},
 		{
-			"offsets": [
-				10,
-				-144
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT",
 			"loop": false,
-			"name": "Left"
-		},
-		{
 			"offsets": [
-				30,
-				-157
+				21,
+				-45
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "Down"
-		},
-		{
-			"offsets": [
-				24,
-				-127
-			],
-			"indices": [],
 			"fps": 24,
-			"anim": "singUP",
+			"name": "Down",
+			"indices": []
+		},
+		{
 			"loop": false,
-			"name": "Up"
+			"offsets": [
+				22,
+				-17
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
 			"offsets": [
-				70,
-				-103
+				19,
+				-33
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
 			"loop": false,
-			"name": "Right"
+			"name": "Left"
 		},
 		{
 			"offsets": [
-				-10,
-				-110
+				41,
+				2
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "idle",
+			"anim": "singLEFT",
 			"loop": false,
-			"name": "idle"
+			"name": "Right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/opRalsei",
 	"position": [
-		0,
-		0
+		10,
+		110
 	],
 	"healthicon": "ralsei",
 	"flip_x": false,
@@ -145,8 +145,8 @@
 		206
 	],
 	"camera_position": [
-		0,
-		0
+		30,
+		-10
 	],
 	"sing_duration": 6.1,
 	"scale": 1
